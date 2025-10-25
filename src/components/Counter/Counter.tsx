@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, Button, Stack } from '@mui/material';
 import { decrement, increment } from '@/features/counterSlice';
 import { useAppDispatch, useAppSelector } from '@/app/store';

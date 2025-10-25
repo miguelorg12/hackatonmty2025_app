@@ -98,7 +98,7 @@ export const AppThemeProvider: React.FC<Props> = ({ children }) => {
           main: '#9DF3C4',
         },
         Ink: {
-          Darkest: '#000000',
+          Darkest: '#1b1a1aff',
           Darker: '#222222',
           Dark: '#303437',
           Base: '#404446',
@@ -130,8 +130,8 @@ export const AppThemeProvider: React.FC<Props> = ({ children }) => {
           Lightest: '#E5FFE5',
         },
         background: {
-          default: mode === 'dark' ? '#000000' : '#FCFBFA',
-          opposite: mode === 'dark' ? '#FCFBFA' : '#000000',
+          default: mode === 'dark' ? '#262626ff' : '#FCFBFA',
+          opposite: mode === 'dark' ? '#FCFBFA' : '#262626ff',
           paper: mode === 'dark' ? '#131313' : '#FCFCFC',
         },
         text: {
