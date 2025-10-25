@@ -1,4 +1,3 @@
-import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Register from '@/pages/Auth/Register';
 import Login from '@/pages/Auth/Login';
@@ -8,7 +7,7 @@ import Categories from '@/pages/Categories/Categories';
 import Layout from '@/components/layout/layaout';
 
 const Routing = () => {
-  const isAuthenticated = false; 
+  const isAuthenticated = true; 
   return (
     <Routes>
       
