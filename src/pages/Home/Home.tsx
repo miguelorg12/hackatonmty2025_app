@@ -12,18 +12,39 @@ import FinancialAlerts from '@/components/Dashboard/FinancialAlerts';
 
 const Home = () => {
   return (
-    <Box sx={{ bgcolor: 'background.default', minHeight: '100vh' }}>
-      <Container sx={{ py: 4 }}>
+    <Box 
+      sx={{ 
+        bgcolor: 'background.default', 
+        minHeight: '100vh',
+        pt: 2,
+        pb: 6
+      }}
+    >
+      <Container maxWidth="xl">
         <DashboardHeader />
 
         {/* Métricas Principales */}
-        <Grid container spacing={3} sx={{ mb: 4 }}>
+        <Grid 
+          container 
+          spacing={3} 
+          sx={{ 
+            mb: 4,
+            mt: 1,
+            '& .MuiPaper-root': {
+              transition: 'transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out',
+              '&:hover': {
+                transform: 'translateY(-4px)',
+                boxShadow: (theme) => theme.shadows[4]
+              }
+            }
+          }}
+        >
           <Grid item xs={12} sm={6} md={3}>
             <MetricCard
               title="Ingresos Totales"
               value="$45,231"
               change={12.5}
-              icon={<AttachMoneyIcon fontSize="large" />}
+              icon={<AttachMoneyIcon sx={{ color: 'success.main' }} fontSize="large" />}
             />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
@@ -31,7 +52,7 @@ const Home = () => {
               title="Egresos Totales"
               value="$32,180"
               change={-5.3}
-              icon={<TrendingUpIcon fontSize="large" />}
+              icon={<TrendingUpIcon sx={{ color: 'error.main' }} fontSize="large" />}
             />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
@@ -39,11 +60,16 @@ const Home = () => {
               title="Balance Actual"
               value="$13,051"
               change={8.2}
-              icon={<AccountBalanceIcon fontSize="large" />}
+              icon={<AccountBalanceIcon sx={{ color: 'info.main' }} fontSize="large" />}
             />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <MetricCard title="ROI Proyectado" value="24.8%" change={3.1} icon={<ShowChartIcon fontSize="large" />} />
+            <MetricCard 
+              title="ROI Proyectado" 
+              value="24.8%" 
+              change={3.1} 
+              icon={<ShowChartIcon sx={{ color: 'warning.main' }} fontSize="large" />} 
+            />
           </Grid>
         </Grid>
 
