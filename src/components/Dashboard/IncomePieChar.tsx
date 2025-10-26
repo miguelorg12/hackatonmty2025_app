@@ -9,7 +9,7 @@ const data = [
   { name: 'Otros Ingresos', value: 1500 },
 ];
 
-const COLORS = ['#0F8B0F', '#1EB01E', '#7FF77F', '#E5FFE5'];
+const COLORS = ['#0B3D91', '#1565C0', '#6A1B9A', '#FF8F00'];
 
 const IncomePieChart = () => {
   const theme = useTheme();
